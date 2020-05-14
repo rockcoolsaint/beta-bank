@@ -1,0 +1,18 @@
+%h1
+  Account Number: #{@bank_account.account_number}
+  %small
+    #{@bank_account.client}
+
+= button_tag :new_transaction, id: "btn-new-transaction", class: "btn btn-primary" do
+  New Transaction
+
+= render partial: "transactions", locals: {bank_account: @bank_account}
+= render partial: "modal_transaction"
+#parameters{ data: { bank_account_id: @bank_account.id } }
+
+= javascript_include_tag "bootstrap.js"
+= javascript_include_tag "bank_accounts/Show"
+:javascript
+  $(document).ready(function() {
+    Show.init();
+  });
