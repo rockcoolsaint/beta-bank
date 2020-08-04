@@ -1,0 +1,11 @@
+%section.content-header
+  %h1
+    Clients Database
+
+%section.content
+  .box.box-primary
+    .box-body
+      = link_to new_client_path, class: "btn btn-primary" do
+        New Client
+
+      = render partial: "list", locals: { clients: @clients }

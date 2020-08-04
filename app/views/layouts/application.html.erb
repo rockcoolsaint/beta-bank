@@ -9,9 +9,13 @@
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <body>
-    <div class="container">
-      <%= yield %>
+  <body class="skin-blue sidebar-mini">
+    <div class="wrapper" style="height: auto">
+      <%= render partial: "shared/header" %>
+      <%= render partial: "shared/sidebar" %>
+      <div class="content-wrapper" style="min-height: 916px;">
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

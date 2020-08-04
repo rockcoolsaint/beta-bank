@@ -1,0 +1,35 @@
+<div style="margin-top: 50px;"></div>
+<div class="container">
+  <div class="col-md-12">
+    <center>
+      <div class="box box-primary">
+        <div class="box-body">
+          <h2>
+            <div class="fa fa-money"></div>
+            <br>
+            Welcome to Beta Bank
+          </h2>
+
+          <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="form-inputs">
+              <%= f.input :login,
+                          required: false,
+                          autofocus: true,
+                          input_html: { autocomplete: "email", class: "form-control" } %>
+              <%= f.input :password,
+                          required: false,
+                          input_html: { autocomplete: "current-password", class: "form-control" } %>
+            </div>
+            <hr>
+            <div class="form-actions">
+              <%= f.button :submit, "Log In", class: "btn btn-primary" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </center>
+  </div>
+  
+</div>
+
+

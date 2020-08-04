@@ -1,0 +1,15 @@
+%aside.main-sidebar
+  %section.sidebar{ style: "height: auto" }
+    %ui.sidebar-menu
+      %li.header
+        MAIN NAVIGATION
+      %li{ class: "#{params[:controller] == 'clients' ? 'active' : ''}"}
+        = link_to clients_path do
+          %i.fa.fa-user
+          %span
+            Clients
+      %li{ class: "#{params[:controller] == 'bank_accounts' ? 'active' : ''}"}
+        = link_to bank_accounts_path do
+          %i.fa.fa-money
+          %span
+            Bank Accounts

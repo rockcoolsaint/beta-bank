@@ -1,0 +1,8 @@
+%section.content-header
+  %h1
+     New Bank Account for #{@client}
+
+%section.content
+  .box.box-primary
+    .box-body
+      =render partial: "form", locals: { client: @client, bank_account: @bank_account }

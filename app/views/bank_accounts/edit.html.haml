@@ -1,6 +1,10 @@
-%h1
-  Edit Bank Account
-  %small
-    #{@bank_account.account_number}
+%section.content-header
+  %h1
+    Edit Bank Account
+    %small
+      #{@bank_account.account_number}
 
-= render partial: "form", locals: {bank_account: @bank_account}
+%section.content
+  .box.box-primary
+    .box-body
+      = render partial: "form", locals: {bank_account: @bank_account}

@@ -24,6 +24,8 @@ gem 'bootstrap-sass'
 gem 'haml'
 gem 'jquery-rails'
 gem 'simple_form'
+gem 'font-awesome-sass', '~> 4.7.0'
+gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -43,6 +45,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'pg', '~> 0.20.0'
   gem 'rails_12factor'
+  gem "pry-rails"
 end
 
 group :test do

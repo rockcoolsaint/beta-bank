@@ -1,0 +1,8 @@
+%section.content-header
+  %h1
+    Edit Client #{@client}
+
+%section.content
+  .box.box-primary
+    .box-body
+      = render partial: "form", locals: { client: @client }
